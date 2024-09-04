@@ -74,10 +74,13 @@ package object FuncionesRecursivas {
 
   def fibonacciA(n: Int): Int = {
 
-    if (n == 0 || n == 1)
+    if (n == 0) {
+      0
+    } else if (n == 1) {
       1
-    else
+    } else {
       fibonacciA(n - 1) + fibonacciA(n - 2)
+    }
   }
 
   def fibonacciI(n: Int): Int = {
