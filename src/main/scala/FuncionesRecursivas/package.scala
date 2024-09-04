@@ -6,12 +6,12 @@ package object FuncionesRecursivas {
     else math.pow(primes.head,math.min(ln.head,lm.head)).toInt*mcdTFA(ln.tail,lm.tail,primes.tail)
   }
 
-  def mcdEB(n: Int, m: Int): (Int, Int,Int) = {
+  def mcdEB(n: Int, m: Int): (Int, Int, Int) = {
+
     if (m == 0) (n, 1, 0)
-    else {val bezout=mcdEB(m,n % m)
-          (bezout.head,
-          bezout.tail.tail.head,
-          bezout.tail.head - (bezout.tail.tail.head * (n / m)))
+    else {
+      val (mcd, x, y) = mcdEB(m, n % m)
+      (mcd, y, x - (n / m) * y)
     }
   }
 
@@ -56,15 +56,15 @@ package object FuncionesRecursivas {
    * maximo comun divisor a partir del teorema de Euclides con coeficientes de Bezout
    */
 
-  def mcdEBez(n: Int, m: Int): (Int, Int, Int) = {
 
-    if (m == 0) (n, 1, 0)
-    else {
-      val (mcd, x, y) = mcdEBez(m, n % m)
-      (mcd, y, x - (n / m) * y)
-      //(mcd,-(n/m)*y,x+y)
-    }
-  }
+     def mcdEB(n: Int, m: Int): (Int, Int,Int) = {
+     if (m == 0) (n, 1, 0)
+     else {val bezout=mcdEB(m,n % m)
+     (bezout.head,
+     bezout.tail.tail.head,
+     bezout.tail.head - (bezout.tail.tail.head * (n / m)))
+     }
+     }
     **/
 
   /**
