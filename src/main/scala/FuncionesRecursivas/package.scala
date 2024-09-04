@@ -87,9 +87,11 @@ package object FuncionesRecursivas {
 
     def fibI(ni: Int, a: Int, b: Int): Int = {
 
-      if (ni == 0)
+      if (ni == 0) {
+        b - 1
+      } else if (ni == 1){
         b
-      else {
+      } else {
         fibI(ni - 1, b, a + b)
       }
     }
