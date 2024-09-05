@@ -1,5 +1,5 @@
 //Importando funciones
-import FuncionesRecursivas.{mcdTFA,mcdEB}
+import FuncionesRecursivas.{mcdTFA,mcdEB,fibonacciA,fibonacciI}
 
 //1. Máximo común divisor utilizando el Teorema Fundamental de la Aritmética.
 /*
@@ -63,3 +63,65 @@ mcdEB(1,1)
 * MCD(307,103)
 * */
 mcdEB(307,103)
+
+// Algoritmos de sucesión de Fibonacci
+
+/*
+* Sea F(n), la función que calcula el número de fibonacci en la posición n, entonces, para
+visualizar un poco mejor el panorama de las pruebas, se define una lista con los los primeros
+20 valores de la sucesión de fibonacci.
+
+ListFibonacci = List(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597,
+2584, 4181, 6765)
+* */
+
+/*
+* Aquí habrán unas iniciales dos llamadas a la función fibonacciA con el fin de probar el caso base del
+algoritmo
+
+* */
+
+fibonacciA(0) // Debe retornar 0
+fibonacciA(1) // Debe retornar 1
+
+
+// Aquí algunas pruebas del algoritmo fibonacciA para valores aleatorios
+
+fibonacciA(2) // Debe retornar 1
+fibonacciA(3) // Debe retornar 2
+fibonacciA(4) // Debe retornar 3
+fibonacciA(5) // Debe retornar 5
+fibonacciA(6) // Debe retornar 8
+fibonacciA(7) // Debe retornar 13
+fibonacciA(8) // Debe retornar 21
+fibonacciA(9) // Debe retornar 34
+fibonacciA(10) // Debe retornar 55
+fibonacciA(11) // Debe retornar 89
+
+/** Sin embargo, dado que no esta definido fibonacci de un número negativo, es decir F(n),
+ * donde n < 0 no esta definido.
+ * Esto anterior, se asume, dado que el algoritmo no esta construido para evaluar el error de que
+ * n < 0, es por esto que, si se evaluase fibonacciA(n) con n < 0, la respuesta muy probablemente
+ * genere una recursión infinita o de algún valor arbitrario.
+**/
+
+/** Para el algoritmo fibonacciI se realizarán exactamente las mismas pruebas, con el fin de
+ * probar los casos base y algunos casos altearios
+**/
+
+fibonacciI(0) // Debe retornar 0
+fibonacciI(1) // Debe retornar 1
+
+
+// Aquí algunas pruebas del algoritmo fibonacciA para valores aleatorios
+
+fibonacciI(2) // Debe retornar 1
+fibonacciI(3) // Debe retornar 2
+fibonacciI(4) // Debe retornar 3
+fibonacciI(5) // Debe retornar 5
+fibonacciI(6) // Debe retornar 8
+fibonacciI(7) // Debe retornar 13
+fibonacciI(8) // Debe retornar 21
+fibonacciI(9) // Debe retornar 34
+fibonacciI(10) // Debe retornar 55
+fibonacciI(11) // Debe retornar 89
