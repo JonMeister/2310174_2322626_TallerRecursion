@@ -1,5 +1,5 @@
 //Importando funciones
-import FuncionesRecursivas.{mcdTFA,mcdEB,fibonacciA,fibonacciI}
+import FuncionesRecursivas.{mcdTFA,mcdEBez,fibonacciA,fibonacciI}
 
 //1. Máximo común divisor utilizando el Teorema Fundamental de la Aritmética.
 /*
@@ -42,27 +42,27 @@ mcdTFA(List(3,2,1),List(2,3,1),List(2,3,5))
 /*
 * MCD(963,657)
 * */
-mcdEB(963,657)
+mcdEBez(963,657)
 
 /*
 * MCD(500,120)
 * */
-mcdEB(500,120)
+mcdEBez(500,120)
 
 /*
 * MCD(86,86)
 * */
-mcdEB(86,86)
+mcdEBez(86,86)
 
 /*
 * MCD(1,1)
 * */
-mcdEB(1,1)
+mcdEBez(1,1)
 
 /*
 * MCD(307,103)
 * */
-mcdEB(307,103)
+mcdEBez(307,103)
 
 // Algoritmos de sucesión de Fibonacci
 
