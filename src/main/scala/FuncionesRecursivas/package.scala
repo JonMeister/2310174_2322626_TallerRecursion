@@ -14,11 +14,11 @@ package object FuncionesRecursivas {
    * maximo comun divisor a partir del teorema de Euclides con coeficientes de Bezout
    */
 
-  def mcdEB(n: Int, m: Int): (Int, Int, Int) = {
+  def mcdEBez(n: Int, m: Int): (Int, Int, Int) = {
 
     if (m == 0) (n, 1, 0)
     else {
-      val (mcd, x, y) = mcdEB(m, n % m)
+      val (mcd, x, y) = mcdEBez(m, n % m)
       (mcd, y, x - (n / m) * y)
     }
   }
@@ -42,7 +42,7 @@ package object FuncionesRecursivas {
   def fibonacciI(n: Int): Int = {
 
     def fibI(ni: Int, a: Int, b: Int): Int = {
-      
+
       if (ni == 0) {
         b - 1
       } else if (ni == 1){
