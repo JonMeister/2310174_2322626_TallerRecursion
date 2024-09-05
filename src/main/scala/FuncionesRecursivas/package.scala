@@ -56,18 +56,6 @@ package object FuncionesRecursivas {
 
     fibI(n, 0, 1)
   }
-
-  def show(li : List[Int], f : Int => Int) : Int = {
-
-    if(li.isEmpty){
-      0
-    }
-    else{
-      print(f(li.head) + ", ")
-      show(li.tail,f)
-    }
-
-  }
   
 }
 

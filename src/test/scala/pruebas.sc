@@ -125,3 +125,20 @@ fibonacciI(8) // Debe retornar 21
 fibonacciI(9) // Debe retornar 34
 fibonacciI(10) // Debe retornar 55
 fibonacciI(11) // Debe retornar 89
+
+//El siguiente algoritmo puede ser util para ver el resultado de una lista de varias entrada,
+//para un algoritmo cualquiera, es decir, la función show recibe una lista de los valores de
+//entrada que se quieren verificar como un algoritmo y el algoritmo mismo que se quiere evaluar,
+//luego imprimira el resultado de haber evaluado la función para cada elemento de la lista.
+/**
+ def show(li : List[Int], f : Int => Int) : Int = {
+
+    if(li.isEmpty){
+        0
+    }
+    else{
+        println(f(li.head))
+        show(li.tail,f)
+    }
+ }
+**/
